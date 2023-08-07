@@ -1,11 +1,12 @@
 
 import React from 'react'
 import { styled } from "styled-components";
+import RollingTitle from './RollingTitle';
 
 const Contact = () => {
   return (
     <StyledWrapper>
-    <h2>Contact</h2>
+    <RollingTitle title="Contact  " />
     <p>Please send me an email!</p>
     <a href="mailto:driffouloomes@gmail.com?subject=Hello!">driffouloomes@gmail.com</a>
     </StyledWrapper>

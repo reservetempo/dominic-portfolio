@@ -1,5 +1,20 @@
 import { createGlobalStyle } from "styled-components";
 
+export const breakpoints = { 
+    mobileSmall: "320px",
+    mobileMedium: "375px",
+    mobileLarge: "4250px",
+    tabletSmall: "480px",
+    tabletMedium: "600px",
+    tabletLarge: "750px",
+    laptopSmall: "770px",
+    laptopMedium: "900px",
+    laptopLarge: "1000px",
+    desktopSmall: "1050px",
+    destopMedium: "1150px",
+    desktopLarge: "1200px"
+ };
+
 export default createGlobalStyle`
 
     :root {
@@ -49,18 +64,19 @@ export default createGlobalStyle`
     }
     h1 {
     padding-top: 30px;
-    font-size: 50px;
+    font-size: clamp(4.5rem, 1rem + 20vw, 17rem);
     font-family: var(--baskerville);
     font-weight: 300;
     margin: 10px;
     }
 
-    h2 {
+    /* h2 {
         font-family: var(--baskerville);
-        font-size: 50px;
+        font-size: clamp(4rem, 1rem + 15vw, 15rem);
         font-weight: 300;
-    }
-
+        
+    } */
+    
     h3, h4 {
         font-family: var(--baskerville);
     }
@@ -70,3 +86,4 @@ export default createGlobalStyle`
         font-weight: 400;
     }
 `
+

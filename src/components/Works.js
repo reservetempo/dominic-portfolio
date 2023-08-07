@@ -2,6 +2,7 @@ import Project from './Project';
 import { styled } from "styled-components";
 import React from 'react';
 import { projects } from "../data";
+import RollingTitle from './RollingTitle';
 // import nyanCat from "../videos/nyanCat.mp4";
 
 const Works = () => {
@@ -9,10 +10,7 @@ const Works = () => {
   console.log(projects)
   return (
     <StyledWrapper>
-      <h2><StyledManicule>☞</StyledManicule>Works</h2>
-      {/* <video autoPlay muted loop>
-        <source src={ nyanCat } type="video/mp4"></source>
-      </video> */}
+      <RollingTitle title="Works "/>
       {projects.map(proj => {
         return (
           <Project 
@@ -33,8 +31,27 @@ const StyledWrapper = styled.div`
   /* height: 500px; */
   width: 100vw;
 `
-const StyledManicule = styled.span`
-    font-size: 100px;
-    font-weight: 300;
-`
+// const StyledH2Wrapper = styled.div`
+//     display: flex;
+//     position: relative;
+//     overflow: hidden;
+//     width: 100vw;
+//     h2 {
+//   font-family: var(--baskerville);
+//   /* font-size: clamp(4rem, 1rem + 15vw, 15rem); */
+//   font-size: 12em;
+//   font-weight: 300;
+//   animation: looping 10s linear infinite;
+
+//   @keyframes looping {
+//     from {
+//       transform: translateX(0%);
+//     }
+//     to {
+//       transform: translateX(-100%);
+//     }
+//   } 
+// }
+// `
+
 export default Works

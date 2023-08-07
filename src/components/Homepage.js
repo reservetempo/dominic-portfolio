@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom";
+
 import { styled } from "styled-components";
 import About from './About';
 import Works from './Works';
 import Contact from './Contact';
-import landscape from "../images/landscape.jpeg"
+import landscape from "../images/landscape.jpeg";
+import { useEffect, useRef, useState } from "react";
+import interact from "interactjs";
+import DraggableImg from "./DraggableImg";
 
 const Homepage = () => {
-    console.clear()
+    console.clear();
+  
     return (
         <div>
             <StyledFlexwrapper>
@@ -17,16 +21,13 @@ const Homepage = () => {
                 <h1>Riffou-</h1>
                 <h1>Loomes</h1>
             </StyledFlexwrapper>
-
-                
-
-            <h1></h1>
-            <StyledImg src={landscape} alt="landscape image" />
-            <div id="about">
-                <About />
-            </div>
+            <DraggableImg />
+            
             <div id="works">
                 <Works />
+            </div>
+            <div id="about">
+                <About />
             </div>
             <div id="contact">
                 <Contact />
@@ -42,11 +43,15 @@ const StyledFlexwrapper = styled.div`
     /* flex-wrap: wrap; */
     /* margin-top: 30px; */
 `
-const StyledImg = styled.img`
-    height: 500px;
+const StyledLandscapeWrapper = styled.div`
+    border: 5px solid red;
+    overflow: hidden;
 `
-const StyledManicule = styled.span`
-    font-size: 80px;
-    /* margin: 50px 0 0 20px; */
+const StyledImg = styled.img`
+    position: relative;
+    left: ${(props) => (props.landscapeLeft) + "px"};
+    height: 100vh;
+    -webkit-user-drag: none;
+    user-select: none;
 `
 export default Homepage
