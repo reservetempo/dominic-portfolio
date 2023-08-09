@@ -7,14 +7,21 @@ const Contact = () => {
   return (
     <StyledWrapper>
     <RollingTitle title="Contact  " />
-    <p>Please send me an email!</p>
-    <a href="mailto:driffouloomes@gmail.com?subject=Hello!">driffouloomes@gmail.com</a>
-    </StyledWrapper>
+    <StyledTextWrapper>
+        <p>Please send me an email! I love to meet new people and learn of new avenues in the industry.</p>
+        <a href="mailto:driffouloomes@gmail.com?subject=Hello!">driffouloomes@gmail.com</a>
+    </StyledTextWrapper>
+</StyledWrapper>
   )
 }
 
 const StyledWrapper = styled.div`
-  height: 500px;
+  height: 100vh;
   width: 100vw;
+`
+const StyledTextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 export default Contact

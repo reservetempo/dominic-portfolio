@@ -1,19 +1,22 @@
 import styled from "styled-components";
 import React from 'react'
 
-const Project = ({projectName, completed, screenshots, concept, link}) => {
+const Project = ({projectName, completed, videoSrc, imageSrc, concept, link}) => {
+  console.log(imageSrc)
   return (
     <StyledWrapper>
-      <h3>{projectName}</h3>
-      {screenshots && 
+      {videoSrc && 
       <video autoPlay muted loop>
-        <source src={screenshots} type="video/mp4"></source>
+        <source src={videoSrc} type="video/mp4"></source>
         Your browser does not support the video tag.
       </video>
       }
-      {/* <h4>Concept</h4> */}
+      {imageSrc &&
+      <StyledImg src={imageSrc} alt={`image of ${projectName}`} />
+      }
+      <h3>{projectName}</h3>
+      <h4>{!completed && "(Work in progress)"}</h4>
       <p>{concept}</p>
-      <p>{completed}</p>
 
       {link && <a href="#">link to project</a>}
 
@@ -22,9 +25,13 @@ const Project = ({projectName, completed, screenshots, concept, link}) => {
 }
 
 const StyledWrapper = styled.div`
-    border: 2px solid black;
+    border-bottom: 2px solid black;
     margin-bottom: 15px;
-    padding: 8px;
+    padding-bottom: 15px;
+`
+const StyledImg = styled.img`
+    width: 90vw;
+    /* margin: 5%; */
 `
 
 

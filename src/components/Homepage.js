@@ -3,25 +3,22 @@ import { styled } from "styled-components";
 import About from './About';
 import Works from './Works';
 import Contact from './Contact';
-import landscape from "../images/landscape.jpeg";
 import { useEffect, useRef, useState } from "react";
 import interact from "interactjs";
-import DraggableImg from "./DraggableImg";
+import ScrollingImg from "./ScrollingImg";
 
 const Homepage = () => {
     console.clear();
   
     return (
         <div>
+            <h1>Dominic</h1>
             <StyledFlexwrapper>
-                <StyledFlexwrapper>
-                    {/* <StyledManicule>☞</StyledManicule> */}
-                    <h1>Dominic</h1>
-                </StyledFlexwrapper>
+                
                 <h1>Riffou-</h1>
                 <h1>Loomes</h1>
             </StyledFlexwrapper>
-            <DraggableImg />
+            <ScrollingImg />
             
             <div id="works">
                 <Works />
@@ -38,10 +35,13 @@ const Homepage = () => {
 }
 
 const StyledFlexwrapper = styled.div`
-    /* display: flex; */
+    display: flex;
     /* line-height: 180px; */
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* margin-top: 30px; */
+    @media (min-width: 1066px) {
+        margin-bottom: 50px;
+    }
 `
 const StyledLandscapeWrapper = styled.div`
     border: 5px solid red;

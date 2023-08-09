@@ -1,16 +1,15 @@
 import { styled } from "styled-components";
 import React from 'react'
-import headshot from "../images/headshot.jpg"
 import RollingTitle from "./RollingTitle";
 const About = () => {
   return (
     <StyledWrapper>
       <RollingTitle title="About "/>
-      <StyledHeadshot src={headshot} alt="picture of me"/>
-      <StyledFlexwrapper>
+      <StyledHeadshot src="/assets/images/headshot.jpg" alt="picture of me"/>
+      <StyledTextwrapper>
       <p>I am a passionate and endlessly curious person. I have countless hobbies from fermenting and cooking all manner of ingredients, to running in nature, and now coding.</p>
       <p>My biggest drive professionally has been to provide value to others. I believe that there is no end to the power of web interfaces to do just that.</p>
-      </StyledFlexwrapper>
+      </StyledTextwrapper>
       
     </StyledWrapper>
   )
@@ -26,11 +25,8 @@ const StyledHeadshot = styled.img`
     filter: grayscale();
     
 `
-const StyledFlexwrapper = styled.div`
-    position: relative;
-    left: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 500px;
+const StyledTextwrapper = styled.div`
+    /* max-width: 40ch;
+    margin: 0% 5%; */
 `
 export default About

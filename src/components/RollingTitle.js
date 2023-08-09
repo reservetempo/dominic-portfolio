@@ -3,7 +3,11 @@ import styled from "styled-components";
 const RollingTitle = ({title}) => {
   return (
     <StyledH2Wrapper>
-        <h2>{title}</h2> <h2>{title}</h2> <h2>{title}</h2>
+        <h2> {title}</h2> 
+        <h2> {title}</h2> 
+        <h2> {title}</h2>
+        <h2> {title}</h2> 
+        <h2> {title}</h2> 
     </StyledH2Wrapper>
   )
 }
@@ -15,10 +19,10 @@ const StyledH2Wrapper = styled.div`
     width: 100vw;
     h2 {
   font-family: var(--baskerville);
-  /* font-size: clamp(4rem, 1rem + 15vw, 15rem); */
-  font-size: 12em;
+  /* font-size: 8em; */
   font-weight: 300;
   animation: looping 10s linear infinite;
+  /* padding: 2rem 0; */
 
   @keyframes looping {
     from {

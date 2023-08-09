@@ -17,7 +17,8 @@ const Works = () => {
             key={proj.id} 
             projectName={proj.projectName}
             completed={proj.completed}
-            screenshots={proj.screenshots}
+            videoSrc={proj.videoSrc}
+            imageSrc={proj.imageSrc}
             concept={proj.concept}
             link={proj.link}
             />

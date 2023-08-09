@@ -63,27 +63,36 @@ export default createGlobalStyle`
         /* font-weight: 300; */
     }
     h1 {
-    padding-top: 30px;
-    font-size: clamp(4.5rem, 1rem + 20vw, 17rem);
+    padding-top: 2rem;
+    font-size: clamp(4.5rem, 1rem + 20vw, 10rem);
     font-family: var(--baskerville);
     font-weight: 300;
     margin: 10px;
+    
     }
 
-    /* h2 {
+    h2 {
         font-family: var(--baskerville);
-        font-size: clamp(4rem, 1rem + 15vw, 15rem);
+        font-size: clamp(4rem, 1rem + 15vw, 9rem);
         font-weight: 300;
+        padding: 2rem 0;
         
-    } */
+    }
     
     h3, h4 {
         font-family: var(--baskerville);
+        margin: 0% 5%;
     }
+    h3 {
+        font-size: 1.25rem;
+    }
+
 
     p {
         font-family: var(--jost);
         font-weight: 400;
+        max-width: 40ch;
+        margin: 0% 5%;
     }
 `
 
