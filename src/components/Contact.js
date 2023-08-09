@@ -2,6 +2,7 @@
 import React from 'react'
 import { styled } from "styled-components";
 import RollingTitle from './RollingTitle';
+import Connections from './Connections';
 
 const Contact = () => {
   return (
@@ -11,6 +12,7 @@ const Contact = () => {
         <p>Please send me an email! I love to meet new people and learn of new avenues in the industry.</p>
         <a href="mailto:driffouloomes@gmail.com?subject=Hello!">driffouloomes@gmail.com</a>
     </StyledTextWrapper>
+    <Connections />
 </StyledWrapper>
   )
 }
