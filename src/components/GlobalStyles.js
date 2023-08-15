@@ -16,10 +16,13 @@ export const breakpoints = {
  };
 
 export default createGlobalStyle`
-
+    @font-face {
+        font-family: "BaskervillePT";
+        src: url("/assets/fonts/baskervillePT.woff2") format("woff2");
+    }
     :root {
         --jost: 'Jost', sans-serif;
-        --baskerville: 'Baskervville', serif;
+        --baskerville: 'BaskervillePT', serif;
         --black: #000000;
         --white: #ffffff;
     }
@@ -58,8 +61,8 @@ export default createGlobalStyle`
 
     body {
         line-height: 1;
-        background-color: var(--white);
-        color: var(--black);
+        background-color: var(--black);
+        color: var(--white);
         /* font-weight: 300; */
     }
     h1 {
@@ -93,6 +96,9 @@ export default createGlobalStyle`
         font-weight: 400;
         max-width: 40ch;
         margin: 0% 5%;
+    }
+    a {
+        font-family: var(--jost);
     }
 `
 

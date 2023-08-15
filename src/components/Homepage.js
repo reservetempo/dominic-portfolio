@@ -6,20 +6,39 @@ import Contact from './Contact';
 import { useEffect, useRef, useState } from "react";
 import interact from "interactjs";
 import ScrollingImg from "./ScrollingImg";
+import Loading from "./Loading";
+import Connections from "./Connections";
+import RollingTitle from "./RollingTitle";
 
 const Homepage = () => {
-    console.clear();
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1000)
+    }, [])
   
     return (
-        <div>
-            <h1>Dominic</h1>
-            <StyledFlexwrapper>
-                
-                <h1>Riffou-</h1>
-                <h1>Loomes</h1>
-            </StyledFlexwrapper>
-            <ScrollingImg />
+        
+        <div id="home">
+            {/* {loading && 
+            <Loading />
+            } */}
+            {/* <img src="/assets/uv.png" /> */}
+            <StyledName>
+                <h1>Dominic</h1>
+                <StyledFlexwrapper>
+                    <h1>Riffou-</h1>
+                    <h1>Loomes</h1>
+                </StyledFlexwrapper>
+            </StyledName>
             
+
+            {/* <h1>Hi, I'm Dominic!</h1>
+            <img src="/assets/images/headshot.jpg" style={{width: "20vw"}} />
+            <h2>Full-stack developer</h2> */}
+            <ScrollingImg />
+            {/* <Connections /> */}
             <div id="works">
                 <Works />
             </div>
@@ -34,6 +53,27 @@ const Homepage = () => {
     )
 }
 
+const StyledName = styled.div`
+    /* z-index: 1;
+    position: absolute; */
+`
+const StyledOWrapper = styled.div`
+
+`
+const SpinningO = styled.h1`
+    /* transform: rotateZ(3.14rad);
+    transition: transform 3s; */
+
+    animation: 10s linear infinite spinning;
+    @keyframes spinning {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+`
 const StyledFlexwrapper = styled.div`
     display: flex;
     /* line-height: 180px; */

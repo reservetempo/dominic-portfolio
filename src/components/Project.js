@@ -2,7 +2,7 @@ import styled from "styled-components";
 import React from 'react'
 
 const Project = ({projectName, completed, videoSrc, imageSrc, concept, link}) => {
-  console.log(imageSrc)
+
   return (
     <StyledWrapper>
       {videoSrc && 
@@ -25,7 +25,7 @@ const Project = ({projectName, completed, videoSrc, imageSrc, concept, link}) =>
 }
 
 const StyledWrapper = styled.div`
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--white);
     margin-bottom: 15px;
     padding-bottom: 15px;
 `
