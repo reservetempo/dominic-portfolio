@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 const SmileyFace = () => {
   return (
 	<StyledWrapper>
-		<StyledSmiley src="/assets/smiley.svg" alt="smiley"/>
+		<StyledSmiley src="/assets/svgs/smiley.svg" alt="smiley"/>
 	</StyledWrapper>
   )
 }

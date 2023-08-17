@@ -18,20 +18,18 @@ const StyledH2Wrapper = styled.div`
     overflow: hidden;
     width: 100vw;
     h2 {
-  font-family: var(--baskerville);
-  /* font-size: 8em; */
-  font-weight: 300;
-  animation: looping 10s linear infinite;
-  /* padding: 2rem 0; */
+      font-family: var(--baskerville);
+      font-weight: 300;
+      animation: looping 10s linear infinite;
 
-  @keyframes looping {
-    from {
-      transform: translateX(0%);
-    }
-    to {
-      transform: translateX(-100%);
-    }
-  } 
-}
+      @keyframes looping {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      } 
+    } 
 `
 export default RollingTitle

@@ -14,11 +14,15 @@ const Project = ({projectName, completed, videoSrc, imageSrc, concept, link}) =>
       {imageSrc &&
       <StyledImg src={imageSrc} alt={`image of ${projectName}`} />
       }
-      <h3>{projectName}</h3>
-      <h4>{!completed && "(Work in progress)"}</h4>
-      <p>{concept}</p>
+      <StyledTextWrapper>
+        <h3>{projectName}</h3>
+        <h4>{!completed && "(Work in progress)"}</h4>
+        <br></br>
+        <p>{concept}</p>
 
-      {link && <a href="#">link to project</a>}
+        {link && <a href="#">link to project</a>}
+      </StyledTextWrapper>
+
 
     </StyledWrapper>
   )
@@ -31,7 +35,10 @@ const StyledWrapper = styled.div`
 `
 const StyledImg = styled.img`
     width: 90vw;
-    /* margin: 5%; */
+    margin: 0% 5%;
+`
+const StyledTextWrapper = styled.div`
+    margin: 5% 0%;
 `
 
 

@@ -1,24 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+
 import styled from "styled-components";
 
-const ScrollingImg = () => {
-    const wrapperRef = useRef(null); 
-    const [scrollPercentage, setScrollPercentage] = useState(0);
-
-    const handleScroll = () => {
-        const scroll = window.scrollY / window.innerHeight;
-        setScrollPercentage(Math.min(scroll * 100, 100))
-    }
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        }
-    }, [])
+const LandscapeIcons = () => {
   return (
     <div>
         <StyledFlexWrapper>
-        {/* <p>Full-stack web developer based in Montreal</p> */}
             <StyledIcons>
                 <img src="/assets/svgs/html.svg" alt="html logo" />
                 <img src="/assets/svgs/css.svg" alt="css logo" />
@@ -30,7 +16,7 @@ const ScrollingImg = () => {
             
         </StyledFlexWrapper>
 
-        <StyledLandscapeWrapper ref={wrapperRef}>
+        <StyledLandscapeWrapper>
             <StyledImg 
             style={{height : "100 vh", transition: "height 0.01s ease"}}
             src="/assets/images/landscape.jpeg"
@@ -55,13 +41,9 @@ const StyledFlexWrapper = styled.div`
 
     >*{
         margin: 0.5rem 0;
-        /* position: absolute; */
     }
 `
 const StyledIcons = styled.div`
-    /* position: absolute; */
-    
-    /* z-index: 2; */
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -76,4 +58,4 @@ const StyledImg = styled.img`
     position: relative;
     height: 60vh;
 `
-export default ScrollingImg
+export default LandscapeIcons

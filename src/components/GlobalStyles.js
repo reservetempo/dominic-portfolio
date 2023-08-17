@@ -87,15 +87,19 @@ export default createGlobalStyle`
         margin: 0% 5%;
     }
     h3 {
-        font-size: 1.25rem;
+        font-size: clamp(1.5rem, 1rem , 2rem);
     }
 
+    h4 {
+        font-size: clamp(1rem, 1rem, 1.25rem);
+    }
 
     p {
         font-family: var(--jost);
         font-weight: 400;
         max-width: 40ch;
         margin: 0% 5%;
+        font-size: clamp(1rem, 1rem, 1.25rem);
     }
     a {
         font-family: var(--jost);

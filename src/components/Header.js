@@ -31,10 +31,6 @@ const StyledFlexWrapper = styled.div`
   align-items: center;
   padding: 0.5rem;
 `
-const StyledTorus = styled.img`
-    width: 1.5rem;
-  
-`
 const StyledLink = styled(HashLink)`
   color: black;
   text-decoration: none;
